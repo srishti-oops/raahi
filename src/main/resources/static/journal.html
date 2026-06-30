@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Journal | Raahi</title>
+
+  <link rel="stylesheet" href="css/journal.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+  <!-- ================= SIDEBAR ================= -->
+
+  <aside class="sidebar">
+
+    <div class="logo">
+
+      <h1>Raahi</h1>
+
+      <span>Your journey, intelligently guided.</span>
+
+    </div>
+
+    <nav>
+
+      <a href="dashboard.html">
+        <i class="fa-solid fa-house"></i>
+        Dashboard
+      </a>
+
+      <a href="mygoals.html">
+        <i class="fa-solid fa-plus"></i>
+        Add Goal
+      </a>
+
+      <a href="mygoals.html">
+        <i class="fa-solid fa-bullseye"></i>
+        Goals
+      </a>
+
+      <a href="habits.html">
+        <i class="fa-solid fa-list-check"></i>
+        Habits
+      </a>
+
+      <a class = "active"
+         href="journal.html">
+        <i class="fa-solid fa-book-open"></i>
+        Journal
+      </a>
+
+      <a href="aicoach.html">
+        <i class="fa-solid fa-brain"></i>
+        AI Coach
+      </a>
+
+      <a href="analytics.html">
+        <i class="fa-solid fa-chart-line"></i>
+        Analytics
+      </a>
+
+      <a href="achievements.html">
+        <i class="fa-solid fa-award"></i>
+        Achievements
+      </a>
+
+      <a class="logout"
+         href="#">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Logout
+      </a>
+
+    </nav>
+
+  </aside>
+  <main class="content">
+
+    <header class="header">
+
+      <div>
+
+        <h1>Daily Journal</h1>
+
+        <p>Capture your thoughts, reflections and progress.</p>
+
+      </div>
+
+      <button class="new-journal-btn">
+
+        <i class="fa-solid fa-plus"></i>
+
+        New Entry
+
+      </button>
+
+    </header>
+
+    <section class="toolbar">
+
+      <input
+              id="searchJournal"
+              type="text"
+              placeholder="Search journal...">
+
+      <select id="moodFilter">
+
+        <option value="All">All Moods</option>
+        <option value="😊 Happy">😊 Happy</option>
+        <option value="😌 Calm">😌 Calm</option>
+        <option value="😐 Neutral">😐 Neutral</option>
+        <option value="😔 Sad">😔 Sad</option>
+        <option value="😤 Stressed">😤 Stressed</option>
+
+      </select>
+
+    </section>
+
+    <section>
+
+      <div id="journalsContainer" class="journals-container"></div>
+
+    </section>
+  </main>
+
+</div>
+
+<div id="journalModal" class="modal">
+
+  <div class="modal-content">
+
+    <div class="modal-header">
+
+      <h2 id="modalTitle">
+
+        New Journal Entry
+
+      </h2>
+
+      <button
+              type="button"
+              class="close-modal"
+              aria-label="Close">
+
+        <i class="fa-solid fa-xmark"></i>
+
+      </button>
+
+    </div>
+
+    <form id="journalForm">
+
+      <input
+              type="hidden"
+              id="journalId">
+
+      <div class="form-group">
+
+        <label>Title</label>
+
+        <input
+                id="journalTitle"
+                type="text"
+                placeholder="Today's Reflection"
+                required>
+
+      </div>
+
+      <div class="form-group">
+
+        <label>Mood</label>
+
+        <select id="journalMood">
+
+          <option>😊 Happy</option>
+          <option>😌 Calm</option>
+          <option>😐 Neutral</option>
+          <option>😔 Sad</option>
+          <option>😤 Stressed</option>
+
+        </select>
+
+      </div>
+
+      <div class="form-group">
+
+        <label>Journal</label>
+
+        <textarea
+                id="journalContent"
+                rows="8"
+                placeholder="Write about your day..."></textarea>
+
+      </div>
+      <div class="form-group">
+
+        <label>Date</label>
+
+        <input
+                type="date"
+                id="journalDate"
+                required>
+
+      </div>
+
+      <div class="modal-buttons">
+
+        <button
+                type="button"
+                class="outline-btn"
+                id="cancelJournal">
+
+          Cancel
+
+        </button>
+
+        <button
+                type="submit"
+                class="primary-btn"
+                id="saveJournalBtn">
+
+          Save Entry
+
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+<script src="js/journal.js"></script>
+
+</body>
+
+</html>

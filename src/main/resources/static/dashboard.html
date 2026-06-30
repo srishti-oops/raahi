@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Raahi</title>
+
+    <link rel="stylesheet"
+          href="css/dashboard.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h1>Raahi</h1>
+
+            <span>Your journey, intelligently guided.</span>
+
+        </div>
+
+        <nav>
+
+            <a class = "active"
+               href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </a>
+
+            <a href="mygoals.html">
+                <i class="fa-solid fa-plus"></i>
+                Add Goal
+            </a>
+
+            <a href="mygoals.html">
+                <i class="fa-solid fa-bullseye"></i>
+                Goals
+            </a>
+
+            <a href="habits.html">
+                <i class="fa-solid fa-list-check"></i>
+                Habits
+            </a>
+
+            <a href="journal.html">
+                <i class="fa-solid fa-book-open"></i>
+                Journal
+            </a>
+
+            <a href="aicoach.html">
+                <i class="fa-solid fa-brain"></i>
+                AI Coach
+            </a>
+
+            <a href="analytics.html">
+                <i class="fa-solid fa-chart-line"></i>
+                Analytics
+            </a>
+
+            <a href="achievements.html">
+                <i class="fa-solid fa-award"></i>
+                Achievements
+            </a>
+
+            <a class="logout"
+               href="#">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="content">
+
+        <header class="dashboard-header">
+
+            <div class="header-content">
+
+                <span id="currentDate"
+                      class="current-date">
+
+                    Monday • 29 June
+
+                </span>
+
+                <h1 id="greeting">
+
+                    Good Evening, Ishika
+
+                </h1>
+
+                <p class="tagline">
+
+                    Let's make today productive.
+
+                </p>
+
+                <small id="lastSynced">
+
+                    Last synced just now
+
+                </small>
+
+            </div>
+
+            <div class="header-actions">
+
+                <button
+                        id="themeToggle"
+                        class="theme-btn">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+                <button
+                        id="profileButton"
+                        class="profile-btn">
+
+                    IA
+
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- ================= DAILY QUOTE ================= -->
+
+        <section class="quote-card">
+
+            <i class="fa-solid fa-quote-left"></i>
+
+            <p id="dailyQuote">
+
+                Small consistent actions create extraordinary results.
+
+            </p>
+
+        </section>
+
+        <!-- ================= HERO GRID ================= -->
+
+        <section class="hero-grid">
+
+            <!-- Today's Focus -->
+
+            <article class="focus-card">
+
+                <div class="card-header">
+
+                    <h3>
+
+                        <i class="fa-solid fa-bullseye"></i>
+
+                        Today's Focus
+
+                    </h3>
+
+                </div>
+
+                <h2 id="focusTitle">
+
+                    Loading...
+
+                </h2>
+
+                <p id="focusDescription">
+
+                    Finding your highest priority goal...
+
+                </p>
+
+                <div class="focus-meta">
+
+                    <span>
+
+                        <i class="fa-regular fa-calendar"></i>
+
+                        <strong id="focusDeadline">
+
+                            --
+
+                        </strong>
+
+                    </span>
+
+                    <span>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        <strong id="focusStatus">
+
+                            --
+
+                        </strong>
+
+                    </span>
+
+                </div>
+
+                <button
+                        id="continueGoal"
+                        class="primary-btn">
+
+                    Continue Goal
+
+                </button>
+
+            </article>
+            <!-- ================= Focus Session ================= -->
+
+            <article class="timer-card">
+
+                <div class="card-header timer-header">
+
+                    <h3>
+
+                        <i class="fa-regular fa-clock"></i>
+
+                        Focus Session
+
+                    </h3>
+
+                    <button
+                            id="editTimer"
+                            class="icon-btn"
+                            title="Edit timer">
+
+                        <i class="fa-solid fa-pen"></i>
+
+                    </button>
+
+                </div>
+
+                <div class="timer-duration">
+
+                    <span id="timerMinutesLabel">
+
+                        25 min
+
+                    </span>
+
+                </div>
+
+                <div
+                        id="timerDisplay"
+                        class="timer-display">
+
+                    25:00
+
+                </div>
+
+                <p class="timer-subtitle">
+
+                    Stay focused on one task at a time.
+
+                </p>
+
+                <div class="timer-controls">
+
+                    <button
+                            id="startTimer"
+                            class="primary-btn">
+
+                        Start
+
+                    </button>
+
+                    <button
+                            id="pauseTimer"
+                            class="secondary-btn">
+
+                        Pause
+
+                    </button>
+
+                    <button
+                            id="resetTimer"
+                            class="secondary-btn">
+
+                        Reset
+
+                    </button>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <!-- ================= SECOND ROW ================= -->
+
+        <section class="stats-grid">
+
+            <!-- Current Streak -->
+
+            <article class="mini-card">
+
+                <div class="card-header">
+
+                    <h3>
+
+                        <i class="fa-solid fa-fire"></i>
+
+                        Current Streak
+
+                    </h3>
+
+                </div>
+
+                <h2 id="streakDays">
+
+                    0 Days
+
+                </h2>
+
+                <p>
+
+                    Keep showing up every day.
+
+                </p>
+
+            </article>
+
+            <!-- Productivity -->
+
+            <article class="mini-card">
+
+                <div class="card-header">
+
+                    <h3>
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        Productivity
+
+                    </h3>
+
+                </div>
+
+                <h2 id="productivityScore">
+
+                    0%
+
+                </h2>
+
+                <p id="productivityText">
+
+                    Based on today's completed goals and habits.
+
+                </p>
+
+            </article>
+
+            <!-- Recent Activity -->
+
+            <article class="activity-card">
+
+                <div class="card-header">
+
+                    <h3>
+
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+
+                        Recent Activity
+
+                    </h3>
+
+                </div>
+
+                <div
+                        id="recentActivity"
+                        class="activity-list">
+
+                    <div class="activity-item">
+
+                        <strong>
+
+                            Loading...
+
+                        </strong>
+
+                        <small>
+
+                            Fetching your latest activity.
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <!-- ================= AI COACH ================= -->
+
+        <section class="coach-card">
+
+            <div class="card-header">
+
+                <h3>
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                    Today's Coaching
+
+                </h3>
+
+            </div>
+
+            <div class="coach-grid">
+
+                <article class="coach-item">
+
+                    <h4>
+
+                        Observation
+
+                    </h4>
+
+                    <p id="coachObservation">
+
+                        Analysing today's progress...
+
+                    </p>
+
+                </article>
+
+                <article class="coach-item">
+
+                    <h4>
+
+                        Recommendation
+
+                    </h4>
+
+                    <p id="coachRecommendation">
+
+                        Preparing recommendations...
+
+                    </p>
+
+                </article>
+
+                <article class="coach-item">
+
+                    <h4>
+
+                        Motivation
+
+                    </h4>
+
+                    <p id="coachMotivation">
+
+                        Loading today's motivation...
+
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+    </main>
+
+</div>
+
+<!-- =====================================================
+     SCRIPTS
+===================================================== -->
+
+<script src="js/app.js"></script>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

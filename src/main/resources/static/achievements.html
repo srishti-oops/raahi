@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Achievements | Raahi</title>
+
+    <link rel="stylesheet"
+          href="css/achievements.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h1>Raahi</h1>
+
+            <span>Your journey, intelligently guided.</span>
+
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </a>
+
+            <a href="mygoals.html">
+                <i class="fa-solid fa-plus"></i>
+                Add Goal
+            </a>
+
+            <a href="mygoals.html">
+                <i class="fa-solid fa-bullseye"></i>
+                Goals
+            </a>
+
+            <a href="habits.html">
+                <i class="fa-solid fa-list-check"></i>
+                Habits
+            </a>
+
+            <a href="journal.html">
+                <i class="fa-solid fa-book-open"></i>
+                Journal
+            </a>
+
+            <a href="aicoach.html">
+                <i class="fa-solid fa-brain"></i>
+                AI Coach
+            </a>
+
+            <a href="analytics.html">
+                <i class="fa-solid fa-chart-line"></i>
+                Analytics
+            </a>
+
+            <a class = "active"
+               href="achievements.html">
+                <i class="fa-solid fa-award"></i>
+                Achievements
+            </a>
+
+            <a class="logout"
+               href="#">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- ================= Main ================= -->
+
+    <main class="content">
+
+        <header class="page-header">
+
+            <div>
+
+                <span class="page-tag">
+
+                    Milestones
+
+                </span>
+
+                <h1>
+
+                    Achievements
+
+                </h1>
+
+                <p>
+
+                    Celebrate your consistency and unlock new milestones as you grow.
+
+                </p>
+
+            </div>
+
+        </header>
+
+        <!-- ================= Summary ================= -->
+
+        <section class="summary-grid">
+
+            <div class="summary-card">
+
+                <span>
+
+                    Unlocked
+
+                </span>
+
+                <h2 id="unlockedCount">
+
+                    0
+
+                </h2>
+
+            </div>
+
+            <div class="summary-card">
+
+                <span>
+
+                    Total Achievements
+
+                </span>
+
+                <h2 id="totalCount">
+
+                    0
+
+                </h2>
+
+            </div>
+
+            <div class="summary-card">
+
+                <span>
+
+                    Completion
+
+                </span>
+
+                <h2 id="completionPercentage">
+
+                    0%
+
+                </h2>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Achievement Cards ================= -->
+
+        <section
+                id="achievementContainer"
+                class="achievement-grid">
+
+        </section>
+        <!-- ================= Navigation ================= -->
+
+        <section class="quick-links">
+
+            <a href="dashboard.html"
+               class="link-card">
+
+                <div>
+
+                    <h3>
+
+                        Dashboard
+
+                    </h3>
+
+                    <p>
+
+                        Return to today's overview and continue your journey.
+
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+            <a href="analytics.html"
+               class="link-card">
+
+                <div>
+
+                    <h3>
+
+                        Analytics
+
+                    </h3>
+
+                    <p>
+
+                        Explore your productivity trends and detailed insights.
+
+                    </p>
+
+                </div>
+
+                <i class="fa-solid fa-chart-line"></i>
+
+            </a>
+
+        </section>
+
+        <!-- ================= Empty State ================= -->
+
+        <section
+                id="emptyState"
+                class="empty-state"
+                style="display:none;">
+
+            <i class="fa-solid fa-award"></i>
+
+            <h2>
+
+                No achievements yet
+
+            </h2>
+
+            <p>
+
+                Start creating goals, building habits and writing journal entries to unlock your first achievement.
+
+            </p>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/achievements.js"></script>
+
+</body>
+
+</html>

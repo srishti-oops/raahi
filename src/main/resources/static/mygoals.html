@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Goals | Raahi</title>
+
+    <link rel="stylesheet" href="css/mygoals.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h1>Raahi</h1>
+
+            <span>Your journey, intelligently guided.</span>
+
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </a>
+
+            <a id="sidebarAddGoal"
+               href="javascript:void(0)">
+                <i class="fa-solid fa-plus"></i>
+                Add Goal
+            </a>
+
+            <a class="active"
+               href="mygoals.html">
+                <i class="fa-solid fa-bullseye"></i>
+                Goals
+            </a>
+
+            <a href="habits.html">
+                <i class="fa-solid fa-list-check"></i>
+                Habits
+            </a>
+
+            <a href="journal.html">
+                <i class="fa-solid fa-book-open"></i>
+                Journal
+            </a>
+
+            <a href="aicoach.html">
+                <i class="fa-solid fa-brain"></i>
+                AI Coach
+            </a>
+
+            <a href="analytics.html">
+                <i class="fa-solid fa-chart-line"></i>
+                Analytics
+            </a>
+
+            <a href="achievements.html">
+                <i class="fa-solid fa-award"></i>
+                Achievements
+            </a>
+
+            <a class="logout" href="#">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="content">
+
+        <header class="page-header">
+
+            <div class="header-left">
+
+                <span class="section-tag">
+                    Goal Management
+                </span>
+
+                <h1>
+                    My Goals
+                </h1>
+
+                <p>
+                    Organize your goals, stay focused, and make steady progress one step at a time.
+                </p>
+
+            </div>
+
+            <button class="new-goal-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Goal
+
+            </button>
+
+        </header>
+
+        <!-- ================= TOOLBAR ================= -->
+
+        <section class="toolbar">
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                        type="text"
+                        id="searchGoal"
+                        placeholder="Search goals...">
+
+            </div>
+
+            <select id="statusFilter">
+
+                <option value="All">All Goals</option>
+
+                <option value="Pending">Pending</option>
+
+                <option value="In Progress">In Progress</option>
+
+                <option value="Completed">Completed</option>
+
+            </select>
+
+        </section>
+
+        <!-- ================= GOALS GRID ================= -->
+
+        <section class="goals-section">
+
+            <div
+                    id="goalsContainer"
+                    class="goals-container">
+
+                <!-- Cards will be inserted dynamically by mygoals.js -->
+
+            </div>
+
+        </section>
+    </main>
+
+</div>
+
+<!-- ================= GOAL MODAL ================= -->
+
+<div id="goalModal" class="modal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2 id="modalTitle">Create Goal</h2>
+
+            <button type="button" class="close-modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+        <form id="goalForm">
+
+            <input
+                    type="hidden"
+                    id="goalId">
+
+            <div class="form-group">
+
+                <label for="goalTitle">
+                    Goal Title
+                </label>
+
+                <input
+                        type="text"
+                        id="goalTitle"
+                        placeholder="Enter your goal"
+                        required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="goalDescription">
+                    Description
+                </label>
+
+                <textarea
+                        id="goalDescription"
+                        rows="4"
+                        placeholder="Describe your goal..."></textarea>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="goalCategory">
+                        Category
+                    </label>
+
+                    <select id="goalCategory">
+
+                        <option value="Study">Study</option>
+                        <option value="Career">Career</option>
+                        <option value="Health">Health</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Finance">Finance</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="goalPriority">
+                        Priority
+                    </label>
+
+                    <select id="goalPriority">
+
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="goalDeadline">
+                    Target Date
+                </label>
+
+                <input
+                        type="date"
+                        id="goalDeadline">
+
+            </div>
+
+            <div class="modal-buttons">
+
+                <button
+                        type="button"
+                        id="cancelGoal"
+                        class="secondary-btn">
+
+                    Cancel
+
+                </button>
+
+                <button
+                        type="submit"
+                        id="saveGoalBtn"
+                        class="primary-btn">
+
+                    Save Goal
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="js/mygoals.js"></script>
+
+</body>
+
+</html>

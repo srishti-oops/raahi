@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Habits | Raahi</title>
+
+    <link rel="stylesheet" href="css/habits.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h1>Raahi</h1>
+
+            <span>Your journey, intelligently guided.</span>
+
+        </div>
+
+        <nav>
+                    <a href="dashboard.html">
+                        <i class="fa-solid fa-house"></i>
+                        Dashboard
+                    </a>
+
+            <a id="sidebarAddHabit" href="javascript:void(0)">
+                <i class="fa-solid fa-plus"></i>
+                Add Habit
+            </a>
+                    <a href="mygoals.html">
+                        <i class="fa-solid fa-bullseye"></i>
+                        Goals
+                    </a>
+
+                    <a class = "active"
+                       href="habits.html">
+                        <i class="fa-solid fa-list-check"></i>
+                        Habits
+                    </a>
+
+                    <a href="journal.html">
+                        <i class="fa-solid fa-book-open"></i>
+                        Journal
+                    </a>
+
+                    <a href="aicoach.html">
+                        <i class="fa-solid fa-brain"></i>
+                        AI Coach
+                    </a>
+
+                    <a href="analytics.html">
+                        <i class="fa-solid fa-chart-line"></i>
+                        Analytics
+                    </a>
+
+                    <a href="achievements.html">
+                        <i class="fa-solid fa-award"></i>
+                        Achievements
+                    </a>
+
+                    <a class="logout"
+                       href="#">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Logout
+                    </a>
+
+                </nav>
+
+            </aside>
+
+    <main class="content">
+
+        <header class="header">
+
+            <div>
+
+                <h1>My Habits</h1>
+
+                <p>Build consistency one day at a time.</p>
+
+            </div>
+
+            <button class="new-habit-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                New Habit
+
+            </button>
+
+        </header>
+
+        <section class="toolbar">
+
+            <input
+                    id="searchHabit"
+                    type="text"
+                    placeholder="Search habits...">
+
+            <select id="statusFilter">
+
+                <option value="All">All Habits</option>
+                <option value="Pending">Pending</option>
+                <option value="Completed">Completed</option>
+
+            </select>
+
+        </section>
+
+        <section>
+
+            <div id="habitsContainer" class="habits-container"></div>
+
+        </section>
+    </main>
+
+</div>
+
+<!-- =========================
+     HABIT MODAL
+========================= -->
+
+<div id="habitModal" class="modal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2 id="modalTitle">Create Habit</h2>
+
+            <span class="close-modal">&times;</span>
+
+        </div>
+
+        <form id="habitForm">
+
+            <input
+                    type="hidden"
+                    id="habitId">
+
+            <div class="form-group">
+
+                <label>Habit Title</label>
+
+                <input
+                        type="text"
+                        id="habitTitle"
+                        placeholder="Drink 2L Water"
+                        required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Description</label>
+
+                <textarea
+                        id="habitDescription"
+                        rows="4"
+                        placeholder="Describe your habit..."></textarea>
+
+            </div>
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label>Category</label>
+
+                    <select id="habitCategory">
+
+                        <option value="Health">Health</option>
+                        <option value="Study">Study</option>
+                        <option value="Career">Career</option>
+                        <option value="Personal">Personal</option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Frequency</label>
+
+                    <select id="habitFrequency">
+
+                        <option value="Daily">Daily</option>
+                        <option value="Weekly">Weekly</option>
+                    </select>
+
+                </div>
+
+            </div>
+            <div class="form-group">
+
+                <label>Target Time</label>
+
+                <input
+                        type="time"
+                        id="habitTargetTime">
+
+            </div>
+
+            <div class="modal-buttons">
+
+                <button
+                        type="button"
+                        class="outline-btn"
+                        id="cancelHabit">
+
+                    Cancel
+
+                </button>
+
+                <button
+                        type="submit"
+                        class="primary-btn"
+                        id="saveHabitBtn">
+
+                    Save Habit
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="js/habits.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,622 @@
+/* =====================================================
+   RAAHI LANDING PAGE
+===================================================== */
+
+:root{
+
+    --background:#F8F5F2;
+    --surface:#FFFFFF;
+
+    --primary:#C96A43;
+    --primary-dark:#A65232;
+
+    --text:#33251F;
+    --text-light:#72645C;
+
+    --border:#E8DED7;
+
+    --radius:14px;
+
+    --shadow:0 12px 35px rgba(70,50,35,.08);
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:"Plus Jakarta Sans",sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+.page{
+
+    max-width:1400px;
+
+    margin:auto;
+
+}
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar{
+
+    height:82px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 7%;
+
+}
+
+.logo{
+
+    font-family:"DM Serif Display",serif;
+
+    font-size:38px;
+
+    color:var(--primary);
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
+.login-link{
+
+    padding:11px 18px;
+
+    color:var(--text);
+
+    font-weight:500;
+
+    transition:.25s;
+
+}
+
+.login-link:hover{
+
+    color:var(--primary);
+
+}
+
+.signup-btn{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    padding:11px 22px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.signup-btn:hover{
+
+    background:var(--primary-dark);
+
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    min-height:68vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px 7% 70px;
+
+}
+
+.hero-content{
+
+    max-width:760px;
+
+}
+
+.hero-tag{
+
+    display:inline-block;
+
+    padding:9px 18px;
+
+    border-radius:999px;
+
+    background:#F1E4DB;
+
+    color:var(--primary);
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-bottom:28px;
+
+}
+
+.hero h1{
+
+    font-family:"DM Serif Display",serif;
+
+    font-size:58px;
+
+    font-weight:400;
+
+    line-height:1.08;
+
+    margin-bottom:24px;
+
+}
+
+.hero p{
+
+    max-width:620px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:var(--text-light);
+
+}
+
+.hero-button{
+
+    display:inline-flex;
+
+    margin-top:42px;
+
+    padding:15px 34px;
+
+    border-radius:12px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.hero-button:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-2px);
+
+}
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.features{
+
+    padding:20px 7% 90px;
+
+}
+
+.section-heading{
+
+    max-width:700px;
+
+    margin:0 auto 55px;
+
+    text-align:center;
+
+}
+
+.section-heading h2{
+
+    font-family:"DM Serif Display",serif;
+
+    font-size:46px;
+
+    font-weight:400;
+
+    margin-bottom:18px;
+
+    color:var(--text);
+
+}
+
+.section-heading p{
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    color:var(--text-light);
+
+}
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+
+}
+
+.feature-card{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    padding:28px;
+
+    transition:.25s ease;
+
+    min-height:220px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.feature-card:hover{
+
+    border-color:#D9CCC3;
+
+    box-shadow:0 10px 24px rgba(40,25,18,.05);
+
+}
+
+.feature-number{
+
+    display:block;
+
+    margin-bottom:14px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    color:var(--primary);
+
+}
+
+.feature-card h3{
+
+    font-size:22px;
+
+    font-weight:600;
+
+    margin-bottom:14px;
+
+    color:var(--text);
+
+}
+
+.feature-card p{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    color:var(--text-light);
+
+}
+
+/* =====================================================
+   FEATURE CARD SPACING
+===================================================== */
+
+.feature-card:nth-child(1){
+
+    animation:fadeUp .45s ease;
+
+}
+
+.feature-card:nth-child(2){
+
+    animation:fadeUp .55s ease;
+
+}
+
+.feature-card:nth-child(3){
+
+    animation:fadeUp .65s ease;
+
+}
+
+.feature-card:nth-child(4){
+
+    animation:fadeUp .75s ease;
+
+}
+
+.feature-card:nth-child(5){
+
+    animation:fadeUp .85s ease;
+
+}
+
+.feature-card:nth-child(6){
+
+    animation:fadeUp .95s ease;
+
+}
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta{
+
+    padding:20px 7% 90px;
+
+}
+
+.cta-box{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    padding:60px;
+
+    text-align:center;
+
+}
+
+.cta-box h2{
+
+    font-family:"DM Serif Display",serif;
+
+    font-size:44px;
+
+    font-weight:400;
+
+    margin-bottom:16px;
+
+    color:var(--text);
+
+}
+
+.cta-box p{
+
+    max-width:580px;
+
+    margin:0 auto 34px;
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+    font-size:17px;
+
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer{
+
+    padding:0 7% 45px;
+
+    text-align:center;
+
+}
+
+.footer h3{
+
+    font-family:"DM Serif Display",serif;
+
+    font-size:34px;
+
+    font-weight:400;
+
+    color:var(--primary);
+
+    margin-bottom:10px;
+
+}
+
+.footer p{
+
+    color:var(--text-light);
+
+    font-size:15px;
+
+}
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(24px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.hero-content{
+
+    animation:fadeUp .6s ease;
+
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:1100px){
+
+    .feature-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hero{
+
+        min-height:auto;
+
+        padding-top:70px;
+
+    }
+
+    .hero h1{
+
+        font-size:48px;
+
+    }
+
+    .section-heading h2{
+
+        font-size:38px;
+
+    }
+
+    .cta-box{
+
+        padding:42px 28px;
+
+    }
+
+    .cta-box h2{
+
+        font-size:36px;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        gap:18px;
+
+        height:auto;
+
+        padding:24px 7%;
+
+    }
+
+    .hero{
+
+        padding:50px 7%;
+
+    }
+
+    .hero h1{
+
+        font-size:40px;
+
+    }
+
+    .hero p{
+
+        font-size:16px;
+
+    }
+
+    .feature-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .section-heading h2{
+
+        font-size:34px;
+
+    }
+
+    .cta-box h2{
+
+        font-size:32px;
+
+    }
+
+}

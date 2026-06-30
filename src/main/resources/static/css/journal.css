@@ -1,0 +1,381 @@
+/* =========================
+   RESET
+========================= */
+.dashboard{
+    display:flex;
+    min-height:100vh;
+}
+
+.content{
+    flex:1;
+    padding:34px 40px;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#FAF8F6;
+    color:#2E2A28;
+}
+
+button,
+input,
+select,
+textarea{
+    font-family:'Poppins',sans-serif;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.sidebar{
+
+    width:220px;
+    background:#FFF8F2;
+    border-right:1px solid var(--border);
+    padding:24px 18px;
+
+}
+
+.logo{
+
+    margin-bottom:36px;
+
+}
+
+.logo h1{
+
+    font-family:'Cormorant Garamond',serif;
+    font-size:40px;
+    color:var(--primary);
+
+}
+
+.logo span{
+
+    display:block;
+    margin-top:6px;
+    font-size:12px;
+    color:var(--text-light);
+    line-height:1.5;
+
+}
+
+.sidebar nav{
+
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+
+}
+
+.sidebar a{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:10px 14px;
+
+    border-radius:8px;
+
+    transition:.2s;
+
+    font-size:15px;
+
+}
+
+.sidebar a:hover,
+.sidebar .active{
+
+    background:var(--primary-light);
+    color:var(--primary);
+
+}
+
+.logout{
+
+    margin-top:30px;
+
+}
+/* =========================
+   CONTENT
+========================= */
+
+.content{
+    flex:1;
+    padding:32px 38px;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:26px;
+}
+
+.header h1{
+    font-family:"Plus Jakarta Sans",sans-serif;
+    font-size:30px;
+    font-weight:700;
+}
+
+.header p{
+    margin-top:6px;
+    color:#847A74;
+    font-size:14px;
+}
+
+.new-journal-btn{
+    border:none;
+    background:#D47749;
+    color:#fff;
+    padding:11px 18px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* =========================
+   TOOLBAR
+========================= */
+
+.toolbar{
+    display:flex;
+    justify-content:space-between;
+    gap:16px;
+    margin-bottom:22px;
+}
+
+.toolbar input{
+    flex:1;
+    padding:11px 14px;
+    border:1px solid #E8DED6;
+    border-radius:8px;
+    background:#fff;
+    outline:none;
+}
+
+.toolbar select{
+    width:190px;
+    padding:11px;
+    border:1px solid #E8DED6;
+    border-radius:8px;
+    background:#fff;
+}
+
+/* =========================
+   JOURNAL GRID
+========================= */
+
+.journals-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
+    gap:18px;
+    margin-top:24px;
+}
+
+.journal-card{
+    background:#fff;
+    border:1px solid #E8DED6;
+    border-radius:10px;
+    min-height: 190px;
+    padding:22px;
+    transition:.2s;
+}
+
+.journal-card:hover{
+    border-color:#D47749;
+}
+
+..journal-card h3{
+     font-family:"Plus Jakarta Sans",sans-serif;
+     font-size:20px;
+     font-weight:600;
+ }
+.journal-content{
+    color:#706A65;
+    line-height:1.6;
+    margin-bottom:18px;
+}
+
+.journal-meta{
+    display:flex;
+    justify-content:space-between;
+    font-size:13px;
+    color:#8A817B;
+}
+/* =========================
+   JOURNAL ACTIONS
+========================= */
+
+.journal-actions{
+    display:flex;
+    gap:10px;
+    margin-top:18px;
+}
+
+.journal-actions button{
+    height:36px;
+    padding:0 16px;
+    border-radius:8px;
+    font-size:14px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.edit-btn{
+    background:#fff;
+    border:1px solid #DDD5CF;
+}
+
+.delete-btn{
+    background:#F5F5F5;
+    border:none;
+}
+
+.edit-btn:hover{
+    border-color:#D47749;
+}
+
+.delete-btn:hover{
+    background:#ECECEC;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.modal-content{
+    background:#fff;
+    width:90%;
+    max-width:700px;
+    padding:30px;
+    border-radius:12px;
+    border:1px solid #E7DDD3;
+    box-shadow:0 20px 60px rgba(0,0,0,.2);
+}
+
+.modal-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.modal-header h2{
+    margin:0;
+    font-family:'Cormorant Garamond',serif;
+    font-size:30px;
+}
+
+.close-modal{
+    width:38px;
+    height:38px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:none;
+    background:transparent;
+    cursor:pointer;
+    border-radius:8px;
+    font-size:20px;
+    color:#666;
+    transition:.2s;
+    z-index:10001;
+    position:relative;
+}
+
+.close-modal:hover{
+    background:#F5ECE5;
+    color:var(--primary);
+}
+.form-group{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:18px;
+}
+
+.form-group label{
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+    padding:12px;
+    border:1px solid #DDD;
+    border-radius:10px;
+    background:#fff;
+    outline:none;
+    font-size:15px;
+}
+
+.form-group textarea{
+    resize:vertical;
+    min-height:180px;
+}
+
+.modal-buttons{
+    display:flex;
+    justify-content:flex-end;
+    gap:12px;
+    margin-top:20px;
+}
+
+.primary-btn{
+    background:#D47749;
+    color:#fff;
+    border:none;
+    padding:12px 22px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.outline-btn{
+    background:#fff;
+    color:#D47749;
+    border:1px solid #D47749;
+    padding:12px 22px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.empty-state{
+    width:100%;
+    text-align:center;
+    padding:60px 20px;
+    background:#fff;
+    border:1px solid #E8DED6;
+    border-radius:10px;
+}
+
+.empty-state h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.empty-state p{
+    color:#777;
+}

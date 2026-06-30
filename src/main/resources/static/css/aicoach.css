@@ -1,0 +1,911 @@
+:root{
+
+    --bg:#FAF8F5;
+    --surface:#FFFFFF;
+    --surface-soft:#FCF8F2;
+
+    --primary:#C96F45;
+    --primary-hover:#B76039;
+    --primary-light:#F6E8DE;
+
+    --text:#2F2A27;
+    --text-light:#7A746C;
+
+    --border:#E9DDD2;
+
+    --success:#4FAA73;
+    --warning:#D59B43;
+    --danger:#D46A5B;
+
+    --radius:10px;
+
+    --shadow:0 6px 18px rgba(0,0,0,.05);
+
+    --transition:.22s ease;
+
+}
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:"Plus Jakarta Sans",sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    line-height:1.6;
+
+}
+
+/* =========================================================
+   LAYOUT
+   ========================================================= */
+
+.dashboard{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar{
+
+    width:220px;
+    background:#FFF8F2;
+    border-right:1px solid var(--border);
+    padding:24px 18px;
+
+}
+
+.logo{
+
+    margin-bottom:36px;
+
+}
+
+.logo h1{
+
+    font-family:'Cormorant Garamond',serif;
+    font-size:40px;
+    color:var(--primary);
+
+}
+
+.logo span{
+
+    display:block;
+    margin-top:6px;
+    font-size:12px;
+    color:var(--text-light);
+    line-height:1.5;
+
+}
+
+.sidebar nav{
+
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+
+}
+
+.sidebar a{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:10px 14px;
+
+    border-radius:8px;
+
+    transition:.2s;
+
+    font-size:15px;
+
+}
+
+.sidebar a:hover,
+.sidebar .active{
+
+    background:var(--primary-light);
+    color:var(--primary);
+
+}
+
+.logout{
+
+    margin-top:30px;
+
+}
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.content{
+
+    flex:1;
+
+    padding:42px;
+
+}
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.page-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    margin-bottom:32px;
+
+}
+
+.page-tag{
+
+    display:inline-block;
+
+    color:var(--primary);
+
+    font-size:.92rem;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.page-header h1{
+
+    font-size:2.15rem;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.page-header p{
+
+    color:var(--text-light);
+
+    max-width:520px;
+
+}
+
+.last-sync{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 18px;
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    font-size:.92rem;
+
+    color:var(--text-light);
+
+}
+
+.last-sync i{
+
+    color:var(--primary);
+
+}
+/* =========================================================
+   COACH HIGHLIGHT
+   ========================================================= */
+
+.coach-highlight{
+
+    margin-bottom:26px;
+
+}
+
+.coach-highlight .card{
+
+    min-height:170px;
+
+}
+
+/* =========================================================
+   CARD GRID
+   ========================================================= */
+
+.coach-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(320px,1fr));
+
+    gap:22px;
+
+    align-items:start;
+
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.card{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    padding:24px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+    min-height:185px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.card:hover{
+
+    border-color:#DFC7B6;
+
+    transform:translateY(-2px);
+
+}
+
+.card-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:18px;
+
+}
+
+.card-title i{
+
+    width:34px;
+
+    height:34px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--primary-light);
+
+    color:var(--primary);
+
+    border-radius:8px;
+
+    font-size:14px;
+
+    flex-shrink:0;
+
+}
+
+.card-title h2{
+
+    font-size:1.28rem;
+
+    font-weight:700;
+
+    color:var(--text);
+
+}
+
+.card-title h3{
+
+    font-size:1.05rem;
+
+    font-weight:700;
+
+    color:var(--text);
+
+}
+
+/* =========================================================
+   REFLECTION
+   ========================================================= */
+
+#reflectionText{
+
+    color:var(--text-light);
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+    margin-top:2px;
+
+}
+
+/* =========================================================
+   LISTS
+   ========================================================= */
+
+.card ul{
+
+    list-style:none;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    margin-top:2px;
+
+}
+
+.card ul li{
+
+    position:relative;
+
+    padding-left:18px;
+
+    color:var(--text-light);
+
+    font-size:.96rem;
+
+    line-height:1.6;
+
+}
+
+.card ul li::before{
+
+    content:"";
+
+    width:7px;
+
+    height:7px;
+
+    background:var(--primary);
+
+    border-radius:50%;
+
+    position:absolute;
+
+    left:0;
+
+    top:10px;
+
+}
+
+/* =========================================================
+   PARAGRAPHS
+   ========================================================= */
+
+.card p{
+
+    color:var(--text-light);
+
+    font-size:.96rem;
+
+    line-height:1.7;
+
+}
+
+/* =========================================================
+   BLOCKQUOTE
+   ========================================================= */
+
+blockquote{
+
+    margin:0;
+
+    padding:18px 20px;
+
+    background:var(--surface-soft);
+
+    border-left:4px solid var(--primary);
+
+    border-radius:8px;
+
+    font-style:italic;
+
+    color:var(--text);
+
+    line-height:1.8;
+
+}
+
+/* =========================================================
+   PERSONALITY
+   ========================================================= */
+
+.personality-card h2{
+
+    font-size:1.45rem;
+
+    margin-bottom:10px;
+
+    color:var(--primary);
+
+    font-weight:700;
+
+}
+
+.personality-card p{
+
+    margin-top:4px;
+
+}
+
+/* =========================================================
+   TIP CARD
+   ========================================================= */
+
+.tip-card{
+
+    background:#FFFDFB;
+
+}
+/* =========================================================
+   TOMORROW PLAN
+========================================================= */
+
+#tomorrowPlan{
+
+    margin-top:4px;
+
+}
+
+#tomorrowPlan li{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:10px;
+
+}
+
+/* =========================================================
+   OBSERVATION / STRENGTH / ATTENTION
+========================================================= */
+
+#observations,
+#strengths,
+#attention{
+
+    margin-top:4px;
+
+}
+
+#observations li,
+#strengths li,
+#attention li{
+
+    padding-bottom:10px;
+
+    border-bottom:1px solid #F2ECE7;
+
+}
+
+#observations li:last-child,
+#strengths li:last-child,
+#attention li:last-child{
+
+    border-bottom:none;
+
+    padding-bottom:0;
+
+}
+
+/* =========================================================
+   RECOMMENDATION
+========================================================= */
+
+#recommendation{
+
+    font-size:.98rem;
+
+    line-height:1.8;
+
+    color:var(--text);
+
+}
+
+/* =========================================================
+   PERSONALITY
+========================================================= */
+
+#personalityTitle{
+
+    margin-top:6px;
+
+    color:var(--primary);
+
+    font-size:1.45rem;
+
+    font-weight:700;
+
+}
+
+#personalityDescription{
+
+    margin-top:12px;
+
+    color:var(--text-light);
+
+}
+
+/* =========================================================
+   COACH TIP
+========================================================= */
+
+#coachTip{
+
+    font-size:.96rem;
+
+}
+
+/* =========================================================
+   LOADING TEXT
+========================================================= */
+
+#reflectionText:empty::after,
+#recommendation:empty::after{
+
+    content:"Loading...";
+
+    color:#999;
+
+}
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#F7F4F0;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#D8C8BB;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#C8B4A4;
+
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width:1100px){
+
+    .coach-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media (max-width:900px){
+
+    .dashboard{
+
+        flex-direction:column;
+
+    }
+
+    .sidebar{
+
+        width:230px;
+        background:#FDF8F2;
+        border-right:1px solid var(--border);
+
+        padding:34px 18px;
+
+        display:flex;
+        flex-direction:column;
+
+        position:sticky;
+        top:0;
+
+        height:100vh;
+
+    }
+
+    .content{
+
+        padding:28px;
+
+    }
+
+    .page-header{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    .last-sync{
+
+        width:fit-content;
+
+    }
+
+}
+
+@media (max-width:600px){
+
+    .content{
+
+        padding:22px;
+
+    }
+
+    .card{
+
+        padding:18px;
+
+    }
+
+    .page-header h1{
+
+        font-size:1.8rem;
+
+    }
+
+    .card-title h2{
+
+        font-size:1.15rem;
+
+    }
+
+    .card-title h3{
+
+        font-size:1rem;
+
+    }
+
+}
+.card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:3px;
+
+    background:transparent;
+
+    transition:.25s ease;
+
+}
+
+.card:hover::before{
+
+    background:var(--primary);
+
+}
+
+/* Lists */
+
+ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+li{
+
+    line-height:1.7;
+
+}
+
+/* Better spacing */
+
+.coach-grid>.card{
+
+    height:100%;
+
+}
+
+/* Better typography */
+
+h1,
+h2,
+h3{
+
+    letter-spacing:-.02em;
+
+}
+
+p{
+
+    line-height:1.75;
+
+}
+
+/* Selection */
+
+::selection{
+
+    background:var(--primary-light);
+
+    color:var(--text);
+
+}
+
+/* Focus */
+
+button:focus,
+a:focus{
+
+    outline:none;
+
+}
+
+button{
+
+    transition:all .2s ease;
+
+}
+
+/* Links */
+
+a{
+
+    transition:.2s;
+
+}
+
+/* Smooth appearance */
+
+.card{
+
+    animation:fadeIn .35s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Empty states */
+
+.card ul:empty::after{
+
+    content:"No data available.";
+
+    color:var(--text-light);
+
+    font-size:.92rem;
+
+}
+
+/* Utility */
+
+.text-muted{
+
+    color:var(--text-light);
+
+}
+
+.text-primary{
+
+    color:var(--primary);
+
+}
+
+.center{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.hidden{
+
+    display:none !important;
+
+}
+
+/* Footer spacing */
+
+body{
+
+    padding-bottom:24px;
+
+}

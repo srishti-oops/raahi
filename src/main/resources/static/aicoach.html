@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Coach | Raahi</title>
+
+    <link rel="stylesheet" href="css/aicoach.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h1>Raahi</h1>
+
+            <span>Your journey, intelligently guided.</span>
+
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </a>
+
+            <a href="mygoals.html">
+                <i class="fa-solid fa-plus"></i>
+                Add Goal
+            </a>
+
+            <a href="mygoals.html">
+                <i class="fa-solid fa-bullseye"></i>
+                Goals
+            </a>
+
+            <a href="habits.html">
+                <i class="fa-solid fa-list-check"></i>
+                Habits
+            </a>
+
+            <a href="journal.html">
+                <i class="fa-solid fa-book-open"></i>
+                Journal
+            </a>
+
+            <a class="active" href="aicoach.html">
+                <i class="fa-solid fa-brain"></i>
+                AI Coach
+            </a>
+
+            <a href="analytics.html">
+                <i class="fa-solid fa-chart-line"></i>
+                Analytics
+            </a>
+
+            <a href="achievements.html">
+                <i class="fa-solid fa-award"></i>
+                Achievements
+            </a>
+
+        </nav>
+
+        <a class="logout" href="#">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </a>
+
+    </aside>
+
+    <main class="content">
+
+        <header class="page-header">
+
+            <div>
+
+                <span class="page-tag">
+
+                    Personal Coach
+
+                </span>
+
+                <h1>
+
+                    AI Coach
+
+                </h1>
+
+                <p>
+
+                    Based on your recent activity and progress.
+
+                </p>
+
+            </div>
+
+            <div class="last-sync">
+
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                Updated 2 minutes ago
+
+            </div>
+
+        </header>
+
+        <section class="coach-highlight">
+
+            <div class="card">
+
+                <div class="card-title">
+
+                    <i class="fa-solid fa-seedling"></i>
+
+                    <h2>
+
+                        Today's Reflection
+
+                    </h2>
+
+                </div>
+
+                <p id="reflectionText">
+
+                    Analysing your activity...
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <section class="coach-grid">
+
+            <div class="card">
+
+                <div class="card-title">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    <h3>
+
+                        Observations
+
+                    </h3>
+
+                </div>
+
+                <ul id="observations">
+
+                    <li>Loading...</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-title">
+
+                    <i class="fa-solid fa-star"></i>
+
+                    <h3>
+
+                        Your Strengths
+
+                    </h3>
+
+                </div>
+
+                <ul id="strengths">
+
+                    <li>Loading...</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-title">
+
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+
+                    <h3>
+
+                        Needs Attention
+
+                    </h3>
+
+                </div>
+
+                <ul id="attention">
+
+                    <li>Loading...</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-title">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                    <h3>
+
+                        Coach Recommendation
+
+                    </h3>
+
+                </div>
+
+                <p id="recommendation">
+
+                    Loading...
+
+                </p>
+
+            </div>
+            <div class="card">
+
+                <div class="card-title">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    <h3>
+
+                        Tomorrow's Plan
+
+                    </h3>
+
+                </div>
+
+                <ul id="tomorrowPlan">
+
+                    <li>Loading...</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card personality-card">
+
+                <div class="card-title">
+
+                    <i class="fa-solid fa-user-check"></i>
+
+                    <h3>
+
+                        Productivity Style
+
+                    </h3>
+
+                </div>
+
+                <h2 id="personalityTitle">
+
+                    Loading...
+
+                </h2>
+
+                <p id="personalityDescription">
+
+                    Analysing your productivity pattern...
+
+                </p>
+
+            </div>
+
+            <div class="card tip-card">
+
+                <div class="card-title">
+
+                    <i class="fa-solid fa-compass"></i>
+
+                    <h3>
+
+                        Coaching Tip
+
+                    </h3>
+
+                </div>
+
+                <blockquote id="coachTip">
+
+                    Loading...
+
+                </blockquote>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/aicoach.js"></script>
+
+</body>
+
+</html>

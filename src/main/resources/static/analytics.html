@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Analytics | Raahi</title>
+
+    <link rel="stylesheet"
+          href="css/analytics.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h1>Raahi</h1>
+
+            <span>Your journey, intelligently guided.</span>
+
+        </div>
+
+        <nav>
+
+            <a href="dashboard.html">
+
+                <i class="fa-solid fa-house"></i>
+
+                Dashboard
+
+            </a>
+
+            <a href="mygoals.html">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Goal
+
+            </a>
+
+            <a href="mygoals.html">
+
+                <i class="fa-solid fa-bullseye"></i>
+
+                Goals
+
+            </a>
+
+            <a href="habits.html">
+
+                <i class="fa-solid fa-list-check"></i>
+
+                Habits
+
+            </a>
+
+            <a href="journal.html">
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Journal
+
+            </a>
+
+            <a href="aicoach.html">
+
+                <i class="fa-solid fa-brain"></i>
+
+                AI Coach
+
+            </a>
+
+            <a class="active"
+               href="analytics.html">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                Analytics
+
+            </a>
+
+            <a href="achievements.html">
+
+                <i class="fa-solid fa-award"></i>
+
+                Achievements
+
+            </a>
+
+            <a class="logout"
+               href="#">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- ================= Main ================= -->
+
+    <main class="content">
+
+        <header class="page-header">
+
+            <div>
+
+                <span class="page-tag">
+
+                    Progress Analytics
+
+                </span>
+
+                <h1>
+
+                    Analytics
+
+                </h1>
+
+                <p>
+
+                    Measure your productivity, consistency and long-term growth.
+
+                </p>
+
+            </div>
+
+        </header>
+
+        <!-- ================= Top Summary ================= -->
+
+        <section class="summary-grid">
+
+            <div class="summary-card">
+
+                <div class="summary-icon">
+
+                    <i class="fa-solid fa-chart-simple"></i>
+
+                </div>
+
+                <span>
+
+                    Productivity Score
+
+                </span>
+
+                <h2 id="productivityScore">
+
+                    0%
+
+                </h2>
+
+            </div>
+
+            <div class="summary-card">
+
+                <div class="summary-icon">
+
+                    <i class="fa-solid fa-fire"></i>
+
+                </div>
+
+                <span>
+
+                    Consistency Score
+
+                </span>
+
+                <h2 id="consistencyScore">
+
+                    0%
+
+                </h2>
+
+            </div>
+
+            <div class="summary-card">
+
+                <div class="summary-icon">
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                </div>
+
+                <span>
+
+                    Weekly Progress
+
+                </span>
+
+                <h2 id="weeklyProgress">
+
+                    0%
+
+                </h2>
+
+            </div>
+
+            <div class="summary-card">
+
+                <div class="summary-icon">
+
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+
+                </div>
+
+                <span>
+
+                    Monthly Progress
+
+                </span>
+
+                <h2 id="monthlyProgress">
+
+                    0%
+
+                </h2>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Progress Cards ================= -->
+
+        <section class="analytics-grid">
+
+            <article class="card">
+
+                <div class="card-title">
+
+                    <i class="fa-solid fa-bullseye"></i>
+
+                    <h3>
+
+                        Goal Completion
+
+                    </h3>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div id="goalProgress"
+                         class="progress-fill">
+
+                    </div>
+
+                </div>
+
+                <p id="goalText">
+
+                    Calculating...
+
+                </p>
+
+            </article>
+
+            <article class="card">
+
+                <div class="card-title">
+
+                    <i class="fa-solid fa-list-check"></i>
+
+                    <h3>
+
+                        Habit Consistency
+
+                    </h3>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div id="habitProgress"
+                         class="progress-fill">
+
+                    </div>
+
+                </div>
+
+                <p id="habitText">
+
+                    Calculating...
+
+                </p>
+
+            </article>
+            <article class="card">
+
+                <div class="card-title">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    <h3>
+
+                        Journal Activity
+
+                    </h3>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div id="journalProgress"
+                         class="progress-fill">
+
+                    </div>
+
+                </div>
+
+                <p id="journalText">
+
+                    Calculating...
+
+                </p>
+
+            </article>
+
+            <article class="card">
+
+                <div class="card-title">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                    <h3>
+
+                        Most Productive Area
+
+                    </h3>
+
+                </div>
+
+                <h2 id="topCategory">
+
+                    Loading...
+
+                </h2>
+
+                <p id="topCategoryText">
+
+                    Analysing your activities...
+
+                </p>
+
+            </article>
+
+        </section>
+
+        <!-- ================= Timeline ================= -->
+
+        <section class="timeline-section">
+
+            <div class="card">
+
+                <div class="card-title">
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                    <h3>
+
+                        Progress Timeline
+
+                    </h3>
+
+                </div>
+
+                <div class="timeline-bars">
+
+                    <div class="timeline-item">
+
+                        <span>Mon</span>
+
+                        <div class="bar">
+
+                            <div id="barMon"
+                                 class="fill">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="timeline-item">
+
+                        <span>Tue</span>
+
+                        <div class="bar">
+
+                            <div id="barTue"
+                                 class="fill">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="timeline-item">
+
+                        <span>Wed</span>
+
+                        <div class="bar">
+
+                            <div id="barWed"
+                                 class="fill">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="timeline-item">
+
+                        <span>Thu</span>
+
+                        <div class="bar">
+
+                            <div id="barThu"
+                                 class="fill">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="timeline-item">
+
+                        <span>Fri</span>
+
+                        <div class="bar">
+
+                            <div id="barFri"
+                                 class="fill">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="timeline-item">
+
+                        <span>Sat</span>
+
+                        <div class="bar">
+
+                            <div id="barSat"
+                                 class="fill">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="timeline-item">
+
+                        <span>Sun</span>
+
+                        <div class="bar">
+
+                            <div id="barSun"
+                                 class="fill">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ================= Bottom Grid ================= -->
+
+        <section class="bottom-grid">
+
+            <article class="card">
+
+                <div class="card-title">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    <h3>
+
+                        This Month
+
+                    </h3>
+
+                </div>
+
+                <div class="stat-row">
+
+                    <span>Goals Completed</span>
+
+                    <strong id="completedGoals">
+
+                        0
+
+                    </strong>
+
+                </div>
+
+                <div class="stat-row">
+
+                    <span>Habits Completed</span>
+
+                    <strong id="completedHabits">
+
+                        0
+
+                    </strong>
+
+                </div>
+
+                <div class="stat-row">
+
+                    <span>Journal Entries</span>
+
+                    <strong id="journalEntries">
+
+                        0
+
+                    </strong>
+
+                </div>
+
+            </article>
+
+            <article class="card">
+
+                <div class="card-title">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                    <h3>
+
+                        Quick Insights
+
+                    </h3>
+
+                </div>
+
+                <ul id="insights">
+
+                    <li>Analysing your productivity...</li>
+
+                </ul>
+
+            </article>
+
+        </section>
+        <!-- ================= Footer ================= -->
+
+        <footer class="analytics-footer">
+
+            <p>
+
+                Your progress is built one small step at a time. Keep showing up.
+
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="js/analytics.js"></script>
+
+</body>
+
+</html>
