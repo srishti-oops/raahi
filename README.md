@@ -1,6 +1,6 @@
 # Raahi
 
-A full-stack productivity platform built using Spring Boot, Firebase and Gemini API. Raahi helps users manage goals, build habits, maintain a daily journal and receive AI-powered productivity guidance from a single application.
+A full-stack productivity platform built using Spring Boot and Firebase. Raahi helps users manage goals, build habits, maintain a daily journal, track productivity, and monitor progress through a single application.
 
 **Live Demo:** https://raahi-production-1e8e.up.railway.app
 
@@ -8,21 +8,22 @@ A full-stack productivity platform built using Spring Boot, Firebase and Gemini 
 
 ## Overview
 
-The idea behind Raahi was to create a single platform where users can manage their daily productivity without switching between multiple applications. It combines goal management, habit tracking, journaling, analytics and AI assistance into one workspace.
+Raahi was built to provide a unified productivity workspace where users can manage goals, habits, journals, and progress without relying on multiple applications. The project focuses on creating a clean, responsive, and organized experience backed by a scalable Spring Boot architecture and Firebase cloud services.
 
 ---
 
 ## Features
 
-- Goal management
-- Habit tracking with streaks
-- Daily journal
-- AI-powered productivity coach
-- Productivity analytics
-- Achievement system
+- User Authentication
+- Goal Management
+- Habit Tracking with Streaks
+- Daily Journal
+- Productivity Analytics
+- Achievement System
+- Dashboard Overview
+- Responsive User Interface
 - Firebase Authentication
-- Firestore integration
-- Responsive user interface
+- Firestore Database Integration
 
 ---
 
@@ -34,7 +35,7 @@ The idea behind Raahi was to create a single platform where users can manage the
 | Backend | Java, Spring Boot |
 | Database | Firebase Firestore |
 | Authentication | Firebase Authentication |
-| AI Integration | Gemini API |
+| Build Tool | Maven |
 | Deployment | Railway |
 | Version Control | Git & GitHub |
 
@@ -43,27 +44,22 @@ The idea behind Raahi was to create a single platform where users can manage the
 ## System Architecture
 
 ```text
-                            User
-                             │
-                             ▼
-                  HTML • CSS • JavaScript
-                             │
-          ┌──────────────────┴──────────────────┐
-          │                                     │
-          ▼                                     ▼
-   REST API Requests                     AI Coach (JavaScript)
-          │                                     │
-          ▼                                     ▼
-   Spring Boot Backend                    Gemini API
-          │
-          ▼
- Firebase Authentication
-          │
-          ▼
-   Firebase Firestore
-          │
-          ▼
- Users • Goals • Habits • Journals
+                           User
+                            │
+                            ▼
+                 HTML • CSS • JavaScript
+                            │
+                     REST API Requests
+                            │
+                            ▼
+                 Spring Boot Backend
+                            │
+           ┌────────────────┴────────────────┐
+           ▼                                 ▼
+Firebase Authentication          Firebase Firestore
+                                            │
+                                            ▼
+                         Users • Goals • Habits • Journals
 ```
 
 ---
@@ -185,32 +181,15 @@ http://localhost:8080
 ## Deployment
 
 The application is deployed on Railway.
-Sensitive credentials such as Firebase Admin SDK and API keys are managed through Railway environment variables and are not stored in this repository.
 
----
-
-## Challenges
-
-- Integrating Firebase with Spring Boot
-- Designing REST APIs for multiple modules
-- Secure cloud deployment without exposing credentials
-- Integrating Gemini API into the productivity workflow
-- Maintaining a consistent user interface across modules
-
----
-
-## Future Improvements
-
-- Calendar integration
-- Email reminders
-- Mobile application
-- Team collaboration
-- Enhanced AI recommendations
+Sensitive Firebase credentials are managed using environment variables and are not intended to be exposed publicly.
 
 ---
 
 ## Author
 
-Srishti Priya
+**Srishti Priya**
+
 GitHub: https://github.com/srishti-oops
+
 LinkedIn: https://www.linkedin.com/in/srishti-priya-36835b323/
